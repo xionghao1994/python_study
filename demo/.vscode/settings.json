@@ -1,0 +1,10 @@
+{
+  // 关闭终端命令回显，隐藏长执行路径
+  "terminal.integrated.echo": "off",
+  // 自动激活虚拟环境，但不输出激活脚本日志
+  "python.terminal.activateEnvironment": false,
+  // 终端启动不加载PowerShell默认横幅、精简输出
+  "terminal.integrated.shellArgs.windows": ["-NoLogo"],
+  // 让Python在文件所在目录运行，减少多余路径打印
+  "python.terminal.executeInFileDir": true
+}
