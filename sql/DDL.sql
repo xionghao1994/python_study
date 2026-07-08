@@ -95,3 +95,38 @@ alter table base_info change class classNew int not null;
 -- 格式: alter table 表名 drop 列
 alter table base_info drop classNew;
 
+-- -----DDL -----------
+/**
+  操作数据库
+  增： create database 表名
+  删： drop table 表名
+  改：alter database 表名 charset utf8mb4
+  查： show 表名
+ */
+
+/**
+  操作数据表
+  增：create table if not exists 表名()
+  删：drop table 表名;
+  改：rename table 旧表名 to 新表名;
+  查：desc 数据表名 || show tables
+ */
+
+/**
+  操作表字段
+  增：alter table 数据表名 add 列名 数据类型[约束]
+  删：alter table 数据表名 drop 列名（注意只有表数据用delete）
+  改：
+  1、修改类型：alter table 数据表名 modify 列名 新的数据类型[约束]
+  2、重命名：alter table 数据表名 change 旧列名 新列名 数据类型[约束]
+  查：desc 数据表名
+ */
+
+-- ------DML---------------
+/**
+  操作表数据
+  增：insert into 表名 values ()
+  删：delete from 表名 where 条件  || truncate table 数据表名（直接删除所有数据）
+  改：update 表名 set 列1=新值, 列2=新值 where 条件
+  查：select * from 表名
+ */
