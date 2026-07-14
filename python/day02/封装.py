@@ -21,6 +21,11 @@ class teacher(object):
     def get_money(self):
         print(f'获得{self.__money}')
 
+    def __make_use(self):
+        print(f'我是私有方法{self.__money}')
+
+    def makePrivate(self):
+        self.__make_use()
 
 class student(teacher):
     pass
@@ -36,3 +41,18 @@ if __name__ == '__main__':
     # print(f'(徒孙) 看到了 (徒弟)的私房钱：{s.__money}')
     # 访问父类的钱 (正确)
     s.get_money()
+
+# 私有方法: def __方法名():
+    s.makePrivate()
+
+# 什么是封装
+  # 将属性和方法写到类里面的操作
+
+# 什么是私有属性和私有方法
+  # 在属性和方法前面加__
+
+# 获取私有属性的方法
+  # 定义get_xx()方法获取私有属性值
+  # 定义set_xx()方法修改私有属性值
+
+# 获取私有方法的方式
