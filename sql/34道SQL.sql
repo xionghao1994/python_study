@@ -1,4 +1,27 @@
 
+-- 创建库
+create database warehouse;
+
+drop database if exists warehouse;
+
+# 建表
+
+CREATE TABLE employees (
+                           employee_id INT(11) PRIMARY KEY AUTO_INCREMENT COMMENT '员工主键ID',
+                           last_name VARCHAR(20) COMMENT '姓氏',
+                           first_name VARCHAR(10) COMMENT '名字',
+                           title VARCHAR(30) COMMENT '职位',
+                           birth_date DATETIME COMMENT '生日',
+                           hire_date DATETIME COMMENT '入职日期',
+                           address VARCHAR(60) COMMENT '地址',
+                           city VARCHAR(15) COMMENT '城市',
+                           region VARCHAR(15) COMMENT '地区',
+                           postal_code VARCHAR(10) COMMENT '邮编',
+                           country VARCHAR(15) COMMENT '国家',
+                           reports_to VARCHAR(10) COMMENT '上级员工ID'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='员工表';
+
+
 # ** 以下是34个练习题**
 
 # 需求1:选中employees 表的所有数据

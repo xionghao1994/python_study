@@ -62,8 +62,8 @@ alter table stu_cor add constraint fk_stu_mid foreign key(cid) references studen
    2、扩展:if()函数.
       格式:if(关系表达式，值1，值2)
       执行流程:先执行关系表达式，看其结果是否成立，成立则返回值1，否则返回值2.
-    select i(5>3,'张三','李四'); --张三
-    select i(5 <3,'张三','李四); --李四
+    select if(5>3,'张三','李四'); --张三
+    select if(5 <3,'张三','李四); --李四
 
    需求:统计运输到法国的订单的数量，
    select count(*) from orders where ship_country='France'; -- 77
