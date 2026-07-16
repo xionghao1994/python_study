@@ -21,6 +21,9 @@ class Student(object):
     def __str__(self):
         return f'姓名:{self.name},性别:{self.gender},年龄:{self.age},联系方式:{self.mobile},描述信息:{self.des}'
 
+    # 用于列表等容器打印时的显示
+    __repr__ = __str__  # 让 __repr__ 和 __str__ 行为一致
+
 # 测试代码，防止在调用者中，执行当前的测试内容
 if __name__ == '__main__':
     # 测试学生表
